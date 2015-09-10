@@ -2,7 +2,7 @@
   (:require [net.cgrand.enlive-html :as html]
             [skyscraper :as s]))
 
-(def tenki-forecast-url "http://www.jma.go.jp/jp/yoho")
+(def ^:private tenki-forecast-url "http://www.jma.go.jp/jp/yoho")
 
 (defn map-title [node]
   (first (html/attr-values node :title)))
@@ -62,5 +62,5 @@
                      :today (forecast-parser today)
                      :tomorrow (forecast-parser tomorrow)}))))
 
-#_(defn main []
-    (take 1 (drop 100 (s/scrape (seed)))))
+(defn scrape []
+  (s/scrape (seed)))
