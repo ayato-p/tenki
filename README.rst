@@ -2,6 +2,9 @@
  tenki
 =======
 
+.. image:: https://img.shields.io/clojars/v/ayato_p/tenki.svg
+           :target: https://clojars.org/ayato_p/tenki
+
 このライブラリは気象庁の `天気予報 <http://www.jma.go.jp/jp/yoho/>`_ をスクレイピングするものです。
 
 Usage
